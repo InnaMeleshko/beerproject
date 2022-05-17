@@ -1,0 +1,32 @@
+.Container {
+  display: flex;
+  background-color: #e9eeec;
+  justify-content: center;
+  height: 100vh;
+}
+
+.Container-inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.Greeting {
+  margin-top: 3em;
+  margin-bottom: 2em;
+  text-align: center;
+  color: #192c19;
+}
+
+.App {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.Buttons-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}

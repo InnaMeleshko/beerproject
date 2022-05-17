@@ -1,0 +1,32 @@
+button {
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 1em;
+  font-size: 2em;
+  cursor: pointer;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.App-link {
+  background-color: #b67646;
+  color: #ffffff;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.App-link:hover {
+  background-color: #b7582a;
+}
+.App-link:active {
+  background-color: #e1c639;
+}
+.Counter {
+  background-color: #abb8a4;
+  color: #ffffff;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+.Total {
+  background-color: #c6af8e;
+  color: #ffffff;
+  margin-top: 2em;
+}
