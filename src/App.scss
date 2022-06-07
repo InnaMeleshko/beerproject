@@ -3,6 +3,8 @@
   background-color: #e9eeec;
   justify-content: center;
   height: 100vh;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .Container-inner {
@@ -12,7 +14,6 @@
 }
 
 .Greeting {
-  margin-top: 3em;
   margin-bottom: 2em;
   text-align: center;
   color: #192c19;
@@ -29,4 +30,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+span {
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 1em;
+  font-size: 2em;
+}
+
+.total {
+  background-color: #c6af8e;
+  color: #fff;
+  margin-top: 2em;
 }

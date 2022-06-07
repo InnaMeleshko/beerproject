@@ -1,7 +1,34 @@
 import "./App.scss";
-import "./button/button.scss";
 
 import React, { useState } from "react";
+import VolumeLabel from "./VolumeLabel/VolumeLabel";
+import ButtonVolume from "./Button/Button";
+import { createTheme, ThemeProvider, } from "@mui/material/styles";
+import green from '@mui/material/colors/green';
+
+
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      // light: will be calculated from palette.primary.main,
+      main: '#b67646',
+      // dark: will be calculated from palette.primary.main,
+      // contrastText: will be calculated to contrast with palette.primary.main
+    },
+
+    secondary: {
+      main: '#657480', 
+    
+
+    }
+    
+
+  },
+});
+
+
 
 const App = () => {
   const [counter, setCounter] = useState(0);
@@ -29,94 +56,65 @@ const App = () => {
   };
 
   return (
+    <ThemeProvider theme={theme} >
     <div className="Container">
       <div className="Container-inner">
+      
         <h1 className="Greeting">How much beer are u going to drink?</h1>
         <div className="App">
           <div className="Buttons-block">
-            <button
-              className="Counter"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              You had {counter} beers{" "}
-            </button>
+            <VolumeLabel volume={counter} />
 
-            <button
-              onClick={() => {
-                handlTotal(0.25);
-                handleClick();
-              }}
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              0.25l
-            </button>
+
+            
+
+              <ButtonVolume
+                onClick={() => {
+                  handlTotal(0.25);
+                  handleClick();
+                }}
+                volume="0.25"
+              />
+         
           </div>
+           
+
 
           <div className="Buttons-block">
-            <button
-              className="Counter"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              You had {counter2} beers{" "}
-            </button>
-            <button
+            <VolumeLabel volume={counter2} />
+
+           
+            <ButtonVolume
               onClick={() => {
                 handlTotal(0.33);
                 handleClick2();
               }}
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              0.33l
-            </button>
+              volume="0.33"
+            />
+           
           </div>
 
           <div className="Buttons-block">
-            <button
-              className="Counter"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              You had {counter3} beers{" "}
-            </button>
-            <button
+            <VolumeLabel volume={counter3} />
+            <ButtonVolume
               onClick={() => {
                 handlTotal(0.5);
                 handleClick3();
               }}
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              0.50l
-            </button>
+              volume="0.50"
+            />
           </div>
         </div>
 
-        <span
-          className="total"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          U had {total} liters in common, {counter + counter2 + counter3} beers
-        </span>
+        <VolumeLabel
+          label={"U had " + total + " liters in common,"}
+          style={{ backgroundColor: "#c6af8e" }}
+          volume={counter + counter2 + counter3}
+        />
+        
       </div>
     </div>
+    </ThemeProvider>
   );
 };
 
