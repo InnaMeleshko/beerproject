@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type= "image/png" href="./public/images/beercounter.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="PWA app for beer counting"
+    />
+    <link rel="apple-touch-icon" href="./public/images/beercounter.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/public/manifest.json" />
+    <title>Beer App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+    <script>
+        if ('serviceWorker' in navigator) {
+        window.addEventListener ('load', () => {
+          navigator.serviceWorker.register('%PUBLIC_URL%/serviceworker.js')
+          .then((reg) => console.log('Success: ', reg.scope))
+          .catch((err) => console.log('Failure: ', err))
+        })
+      }
+    </script>
+    
+
+    </div>
+  </body>
+</html>

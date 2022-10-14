@@ -1,6 +1,7 @@
 {
   "name": "moz-todo-react",
   "version": "0.1.0",
+  "homepage": "https://innameleshko.github.io/beerproject/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
@@ -19,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "prettier": "2.6.2",
     "stylelint": "^14.8.2",
     "stylelint-config-standard": "^25.0.0"

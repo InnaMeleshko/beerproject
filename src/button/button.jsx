@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 
 function ButtonVolume(props) {
   return (
-    <Box m={2} pt={3}>
+    <Box  m={7} >
     <Button  variant='contained' color='secondary' size='large' onClick={props.onClick} className={styles.button}>
       {" "}
       {props.volume}l{" "}
