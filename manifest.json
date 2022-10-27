@@ -1,19 +1,16 @@
 {
   "short-name": "Beer App",
   "name": "beer App PWA",
-  "icons": [ 
+  "icons": [
     {
-      "src": "./images/1.png",
+      "src": "./public/images/logo",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
-
     }
-
   ],
   "start_url": "./",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
-  
 }
