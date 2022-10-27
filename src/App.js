@@ -1,36 +1,26 @@
 import "./App.scss";
-
 import React, { useState } from "react";
 import VolumeLabel from "./VolumeLabel/VolumeLabel";
 import ButtonVolume from "./Button/Button";
-import { createTheme, ThemeProvider, } from "@mui/material/styles";
-
-
-
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Footer from "./Footer/footer";
+import Header from "./Header/header";
 
 
 const theme = createTheme({
   palette: {
     primary: {
       // light: will be calculated from palette.primary.main,
-      main: '#b67646',
+      main: "#f57c00",
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
 
     secondary: {
-      main: '#657480', 
-    
-
-    }
-    
-
+      main: "#4e342e",
+    },
   },
 });
-
-
-
-
 
 
 const App = () => {
@@ -59,34 +49,24 @@ const App = () => {
   };
 
   return (
-    <ThemeProvider theme={theme} >
-    <div className="Container">
-      <div className="Container-inner">
-      
-        <h1 className="Greeting">How much beer are u going to drink?</h1>
-        <div className="App">
+    <ThemeProvider theme={theme}>
+    <div className="Wrapper">
+      <Header title="Final price: " secondTitle="Last update: " />
+      <div className="Main">
+        <div className="Buttons-container">
           <div className="Buttons-block">
             <VolumeLabel volume={counter} />
-
-
-            
-
-              <ButtonVolume
-                onClick={() => {
-                  handlTotal(0.25);
-                  handleClick();
-                }}
-                volume="0.25"
-              />
-         
+            <ButtonVolume
+              onClick={() => {
+                handlTotal(0.25);
+                handleClick();
+              }}
+              volume="0.25"
+            />
           </div>
-           
-
-
           <div className="Buttons-block">
             <VolumeLabel volume={counter2} />
 
-           
             <ButtonVolume
               onClick={() => {
                 handlTotal(0.33);
@@ -94,9 +74,7 @@ const App = () => {
               }}
               volume="0.33"
             />
-           
           </div>
-
           <div className="Buttons-block">
             <VolumeLabel volume={counter3} />
             <ButtonVolume
@@ -108,15 +86,14 @@ const App = () => {
             />
           </div>
         </div>
-
         <VolumeLabel
-          label={"U had " + total + " liters in common,"}
-          style={{ backgroundColor: "#c6af8e" }}
+          label={"U had " + total + " liters in common, "}
+          style={{ backgroundColor: "#ffb74d" }}
           volume={counter + counter2 + counter3}
         />
-        
       </div>
-    </div>
+      <Footer />
+      </div>
     </ThemeProvider>
   );
 };
