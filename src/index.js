@@ -5,6 +5,7 @@ import App from "./App";
 import History from "./History";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import About from "./About";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,9 @@ root.render(
         <Route exact path="/history">
           <History />
         </Route>
+        <Route exact path="/about">
+        <About />
+      </Route>
       </Switch>
     </Router>
   </React.StrictMode>

@@ -33,9 +33,14 @@ const Footer = () => {
           <h3>Settings</h3>
         </div>
 
+        
+
         <div className="Icon-information">
+        <Link to="/about" className="Icon-information">
           <InfoOutlinedIcon color="primary" fontSize="large"></InfoOutlinedIcon>
           <h3>About</h3>
+          </Link>
+
         </div>
       </div>
     </footer>
