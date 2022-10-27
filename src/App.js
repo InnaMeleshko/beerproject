@@ -86,6 +86,7 @@ const App = () => {
             />
           </div>
         </div>
+        
         <VolumeLabel
           label={"U had " + total + " liters in common, "}
           style={{ backgroundColor: "#ffb74d" }}
