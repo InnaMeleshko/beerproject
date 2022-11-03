@@ -19,8 +19,8 @@ root.render(
           <History />
         </Route>
         <Route exact path="/about">
-        <About />
-      </Route>
+          <About />
+        </Route>
       </Switch>
     </Router>
   </React.StrictMode>

@@ -21,17 +21,14 @@ const theme = createTheme({
   },
 });
 
-const History = () => {
+const Settings = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div className="Main">
-        <div className="Container">
-          <Header title="Number of beers: " />
-          <div className="Container-inner">
-            <div className="Time">
-              <h3>Numbers of beers</h3>
-              <h3>Final price</h3>
-            </div>
+      <div className="Container">
+        <Header title="Settings " />
+        <div className="Container-inner">
+          <div className="Time">
+            <h3>Settings</h3>
           </div>
         </div>
         <Footer />
@@ -39,4 +36,4 @@ const History = () => {
     </ThemeProvider>
   );
 };
-export default History;
+export default Settings;

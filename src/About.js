@@ -6,7 +6,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Header from "./Header/header";
 import Footer from "./Footer/footer";
 
-
 const theme = createTheme({
   palette: {
     primary: {
@@ -22,7 +21,6 @@ const theme = createTheme({
   },
 });
 
-
 const About = () => {
   return (
     <ThemeProvider theme={theme}>
@@ -31,7 +29,6 @@ const About = () => {
         <div className="Container-inner">
           <div className="Time">
             <h3>Made by Inna Meleshko</h3>
-            
           </div>
         </div>
         <Footer />

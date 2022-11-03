@@ -17,30 +17,30 @@ const Footer = () => {
           <h3>History</h3>
         </Link>
 
-        <div className="Icon-information">
+        <Link to="/" className="Icon-information">
           <SportsBarOutlinedIcon
             color="primary"
             fontSize="large"
           ></SportsBarOutlinedIcon>
           <h3>BeerApp</h3>
-        </div>
+        </Link>
 
-        <div className="Icon-information">
+        <Link to="/settings" className="Icon-information">
           <SettingsOutlinedIcon
             color="primary"
             fontSize="large"
           ></SettingsOutlinedIcon>
           <h3>Settings</h3>
-        </div>
-
-        
+        </Link>
 
         <div className="Icon-information">
-        <Link to="/about" className="Icon-information">
-          <InfoOutlinedIcon color="primary" fontSize="large"></InfoOutlinedIcon>
-          <h3>About</h3>
+          <Link to="/about" className="Icon-information">
+            <InfoOutlinedIcon
+              color="primary"
+              fontSize="large"
+            ></InfoOutlinedIcon>
+            <h3>About</h3>
           </Link>
-
         </div>
       </div>
     </footer>

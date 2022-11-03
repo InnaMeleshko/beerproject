@@ -1,23 +1,22 @@
-body {
+body,
+html {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .Wrapper {
-  min-height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  min-height: 100vh;
 
-
+  // align-items: center;
 }
 
 .Main {
-
-  flex: 1 1 auto;
-
-
+  margin-bottom: 2em;
 }
-
 
 .Container {
   height: auto;
@@ -33,20 +32,10 @@ body {
   text-decoration: none;
 }
 
-.Logo {
-  align-items: center;
-}
-
 .Title {
   color: #4e342e;
   font-style: normal;
   font-size: 400;
-}
-
-.Header-inner {
-  color: #4e342e;
-  padding-left: 4em;
-  font-weight: 300;
 }
 
 .Greeting {
@@ -61,15 +50,9 @@ body {
   text-align: center;
 }
 
-.Buttons-block {
-  // max-width: 900px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
 span {
-  padding: 20px 10px;
+  padding: 20px 20px;
+
   border: none;
   border-radius: 1em;
   font-size: 1em;
@@ -110,15 +93,16 @@ h2 {
   font-weight: 300;
 }
 
-// .Time {
-//   display: block;
-//   width: 100%;
+.Buttons-block {
+  margin: 2em auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-//   margin-top: 3em;
-//   margin-bottom: 3em;
-//   margin-right: 5em;
-//   margin-left: 5em;
-//   margin-right: 5em;
-//   padding-left: 5em;
-
-// }
+.Buttons-container {
+  display: flex;
+  flex-direction: column;
+  margin: 3em auto;
+}
