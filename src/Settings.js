@@ -27,9 +27,14 @@ const Settings = () => {
       <div className="Container">
         <Header title="Settings " />
         <div className="Container-inner">
-          <div className="Time">
-            <h3>Settings</h3>
-          </div>
+
+        <div className="Inner-text">
+
+          <h3>Settings</h3>
+          <h3>Brannd of beer</h3>
+          <h3>Price</h3>
+          <h3>Currency</h3>
+        </div>
         </div>
         <Footer />
       </div>
