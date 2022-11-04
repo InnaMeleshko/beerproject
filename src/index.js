@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import History from "./History";
+import Settings from "./Settings";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./About";
@@ -17,6 +18,9 @@ root.render(
         </Route>
         <Route exact path="/history">
           <History />
+        </Route>
+        <Route exact path="/settings">
+          <Settings />
         </Route>
         <Route exact path="/about">
           <About />
