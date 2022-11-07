@@ -7,7 +7,7 @@ function ButtonVolume(props) {
   return (
     <Box m={7}>
       <Button
-        variant="contained"
+        variant="orange"
         color="primary"
         size="large"
         onClick={props.onClick}
