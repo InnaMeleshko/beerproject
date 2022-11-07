@@ -28,8 +28,6 @@ const theme = createTheme({
           '&:active': {
             backgroundColor: '#e1c639'
           }
-
-
         }
       }
     ]
