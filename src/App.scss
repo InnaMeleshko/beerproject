@@ -22,12 +22,13 @@ html {
   height: auto;
 }
 .Container-inner {
-  padding-left: 2em;
-  align-items: left;
+  // align-items: left;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  // flex-direction: column;
   background-color: #fafafa;
-  padding-bottom: 3em;
+  padding: 3em;
+  align-items: center;
 }
 .Icon-information {
   text-decoration: none;
@@ -107,6 +108,3 @@ h2 {
   flex-direction: column;
   margin: 3em auto;
 }
-
-
-

@@ -3,30 +3,22 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import History from "./History";
-import Settings from "./Settings";
+
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./About";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router basename="/beerproject">
-      <Switch>
-        <Route exact path="/">
-          <App />
-        </Route>
-        <Route exact path="/history">
-          <History />
-        </Route>
-        <Route exact path="/settings">
-          <Settings />
-        </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
-      </Switch>
-    </Router>
+    <BrowserRouter basename="/beerproject">
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/history" element={<History />} />
+        <Route path="/settings" element={<History />} />
+        npm <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

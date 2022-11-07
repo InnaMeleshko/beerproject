@@ -10,30 +10,29 @@ import Header from "./Header/header";
 const theme = createTheme({
   components: {
     MuiButton: {
-      variants: [ {
-        props: {variant: 'orange'},
-        style: {
-          padding: '15px 60px',
-          color: '#fff',
-          backgroundColor: '#d08821',
-          fontWeight: '300',
-          boxShadow: 'none',
-          cursor: 'pointer',
-          fontSize: '1em',
-          borderRadius: '16px',
-          border:'none',
-          '&:hover': {
-            backgroundColor: '#b7582a'
+      variants: [
+        {
+          props: { variant: "orange" },
+          style: {
+            padding: "15px 60px",
+            color: "#fff",
+            backgroundColor: "#d08821",
+            fontWeight: "300",
+            boxShadow: "none",
+            cursor: "pointer",
+            fontSize: "1em",
+            borderRadius: "16px",
+            border: "none",
+            "&:hover": {
+              backgroundColor: "#b7582a",
+            },
+            "&:active": {
+              backgroundColor: "#e1c639",
+            },
           },
-          '&:active': {
-            backgroundColor: '#e1c639'
-          }
-        }
-      }
-    ]
-    }
-
-
+        },
+      ],
+    },
   },
   palette: {
     primary: {
@@ -110,15 +109,18 @@ const App = () => {
                   handlTotal(0.5);
                   handleClick3();
                 }}
-              
                 volume="0.50"
               />
             </div>
           </div>
 
-          <VolumeLabel 
+          <VolumeLabel
             label={"U had " + total + " liters in common, "}
-            style={{ backgroundColor: "#ffb74d", marginRight: "3em", margin: "3em" }}
+            style={{
+              backgroundColor: "#ffb74d",
+              marginRight: "3em",
+              margin: "3em",
+            }}
             volume={counter + counter2 + counter3}
           />
         </div>
