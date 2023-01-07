@@ -5,8 +5,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
-import Header from "./Header/header";
-import Footer from "./Footer/footer";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 
 const theme = createTheme({
   components: {

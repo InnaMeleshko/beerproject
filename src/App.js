@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import VolumeLabel from "./VolumeLabel/VolumeLabel";
 import ButtonVolume from "./Button/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Footer from "./Footer/footer";
-import Header from "./Header/header";
+import Footer from "./Footer/Footer";
+import Header from "./Header/Header";
 
 const theme = createTheme({
   components: {
