@@ -80,7 +80,6 @@ const App = () => {
         <div className="Main">
           <div className="Buttons-container">
             <div className="Buttons-block">
-              <VolumeLabel volume={counter} />
               <ButtonVolume
                 onClick={() => {
                   handlTotal(0.25);
@@ -88,11 +87,10 @@ const App = () => {
                 }}
                 volume="0.25"
               />
+              <VolumeLabel volume={counter} />
             </div>
 
             <div className="Buttons-block">
-              <VolumeLabel volume={counter2} />
-
               <ButtonVolume
                 onClick={() => {
                   handlTotal(0.33);
@@ -100,10 +98,10 @@ const App = () => {
                 }}
                 volume="0.33"
               />
+              <VolumeLabel volume={counter2} />
             </div>
 
             <div className="Buttons-block">
-              <VolumeLabel volume={counter3} />
               <ButtonVolume
                 onClick={() => {
                   handlTotal(0.5);
@@ -111,13 +109,14 @@ const App = () => {
                 }}
                 volume="0.50"
               />
+              <VolumeLabel volume={counter3} />
             </div>
           </div>
 
           <VolumeLabel
             label={"U had " + total + " liters in common, "}
             style={{
-              backgroundColor: "#ffb74d",
+              backgroundColor: "#b7582a",
               marginRight: "3em",
               margin: "3em",
             }}

@@ -55,16 +55,18 @@ const Settings = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="Container">
-        <Header title="Settings " />
+        <Header title="Settings" />
         <div className="Container-inner">
           <div>
             <h3>Settings</h3>
-            <h3>Brannd of beer</h3>
+            <h3>Brand of beer</h3>
             <h3>Price</h3>
             <h3>Currency</h3>
           </div>
           <div>
-            <Button variant="orange" onClick={goBack}>Go back</Button>
+            <Button variant="orange" onClick={goBack}>
+              Go back
+            </Button>
           </div>
         </div>
         <Footer />

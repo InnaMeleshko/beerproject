@@ -58,8 +58,17 @@ const History = () => {
           <Header title="Number of beers: " />
           <div className="Container-inner">
             <div>
-              <h3>Numbers of beers</h3>
-              <h3>Final price</h3>
+              <div className="Inner-data">
+    
+
+                <h3>Numbers of beers</h3>        
+                <span >12</span>      {/* insert total   */} 
+              </div>
+
+              <div className="Inner-data">
+                <h3>Final volume</h3> 
+                <span>50L</span>  {/* insert  counter + counter 2 + counter 3  */}  
+              </div>
             </div>
             <div>
               <Button variant="orange" onClick={goBack}>

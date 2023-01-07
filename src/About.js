@@ -56,15 +56,19 @@ const About = () => {
     <ThemeProvider theme={theme}>
       <div className="Container">
         <Header title="About " />
-        <div className="Container-inner">
-          <div className="Time">
-            <h3>Made by Inna Meleshko</h3>
-          </div>
-          <div>
-            <Button variant="orange" onClick={goBack}>Go back</Button>
+        <div className="Main">
+          <div className="Container-inner">
+            <div>
+              <h3>Made by Inna Meleshko</h3>
+            </div>
+            <div>
+              <Button variant="orange" onClick={goBack}>
+                Go back
+              </Button>
+            </div>
           </div>
         </div>
-        <Footer />
+        <Footer style={{ marginTop: "auto" }} />
       </div>
     </ThemeProvider>
   );

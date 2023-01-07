@@ -4,46 +4,30 @@ html {
   display: flex;
   flex-direction: column;
 }
-
-.Wrapper {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-
-  // align-items: center;
-}
-
 .Main {
   margin-bottom: 2em;
 }
-
-.Container {
-  height: auto;
-}
 .Container-inner {
-  // align-items: left;
   display: flex;
-  justify-content: space-between;
-  // flex-direction: column;
+  justify-content: space-around;
+
   background-color: #fafafa;
   padding: 3em;
   align-items: center;
+  min-height: 100vh;
 }
 .Icon-information {
   text-decoration: none;
 }
 
 .Title {
-  color: #4e342e;
-  font-style: normal;
   font-size: 400;
 }
 
 .Greeting {
   text-align: left;
   padding-left: 2em;
-  color: #4e342e;
+  
 }
 
 .App {
@@ -54,7 +38,6 @@ html {
 
 span {
   padding: 20px 20px;
-
   border: none;
   border-radius: 1em;
   font-size: 1em;
@@ -63,13 +46,10 @@ span {
 }
 
 .total {
-  // background-color: main;
-  // color: #fff;
   margin-top: 2em;
 }
 
 .Footer-inner {
-  // max-width: 900px;
   margin-top: 2em;
   margin-bottom: 2em;
   margin-right: 3em;
@@ -84,14 +64,12 @@ span {
   align-items: center;
 }
 
+
+h1,
+h2,
 h3 {
   color: #4e342e;
   font-style: normal;
-  font-weight: 300;
-}
-
-h1,
-h2 {
   font-weight: 300;
 }
 
@@ -107,4 +85,9 @@ h2 {
   display: flex;
   flex-direction: column;
   margin: 3em auto;
+}
+
+.Inner-data {
+  display: flex;
+  justify-content: space-between;
 }
