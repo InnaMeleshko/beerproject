@@ -12,10 +12,22 @@ const Settings = () => {
       <Header title="Settings" />
       <div className="Container-inner">
         <div>
-          <h3>Settings</h3>
-          <h3>Brand of beer</h3>
-          <h3>Price</h3>
-          <h3>Currency</h3>
+          <div>
+            <h3>Vibration</h3>
+            <p>Turn on/off the vibration when counting</p>
+            <button></button>
+          </div>
+          <div>
+            <h3>Price and Currency</h3>
+          </div>
+          <div>
+            <h3>Don't tell me</h3>
+            <p>Turn on/off the tottal price</p>
+            <button></button>
+          
+          </div>
+         
+          
         </div>
         <div>
           <Button variant="orange" onClick={goBack}>

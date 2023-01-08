@@ -11,7 +11,7 @@ const History = () => {
   return (
     <div className="Main">
       <div className="Container">
-        <Header title="Number of beers: " />
+        <Header title="Drinking history" />
         <div className="Container-inner">
           <div>
             <div className="Inner-data">
