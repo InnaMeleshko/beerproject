@@ -9,7 +9,7 @@ const History = () => {
   const navigate = useNavigate();
   const goBack = () => navigate(-1);
   return (
-    <div className="Main">
+    <div className="Container">
       <div className="Container">
         <Header title="Drinking history" />
         <div className="Container-inner">

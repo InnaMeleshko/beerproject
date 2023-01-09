@@ -33,7 +33,7 @@ const App = () => {
   };
 
   return (
-    <div className="Wrapper">
+    <div className="Container">
       <Header title="Final price: " secondTitle="Last update: " />
       <div className="Main">
         <div className="Buttons-container">
@@ -74,9 +74,7 @@ const App = () => {
         <VolumeLabel
           label={"U had " + total + " liters in common, "}
           style={{
-            backgroundColor: "#b7582a",
-            marginRight: "3em",
-            margin: "3em",
+            Width: "200px",
           }}
           volume={counter + counter2 + counter3}
         />

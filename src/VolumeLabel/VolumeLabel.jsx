@@ -6,7 +6,7 @@ function VolumeLabel(props) {
   const label = props.label ? props.label : "You had";
 
   return (
-    <span style={props.style} className={styles.label}>
+    <span style={{ padding: "20px" }} className={styles.label}>
       {label} {props.volume} {ending}
     </span>
   );
