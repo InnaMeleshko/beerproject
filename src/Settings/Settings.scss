@@ -1,11 +1,11 @@
-.settings-inner {
+.container-inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   // min-height: 100vh;
 }
-.settings-block {
+.container-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,12 +17,9 @@
   margin-bottom: 3em;
   display: flex;
 
-
   justify-content: flex-end;
 }
 .Container {
   max-width: 800px;
   margin: 0 auto;
 }
-
-
