@@ -1,6 +1,6 @@
-import "./App.scss";
+import "./Home.scss";
 
-import React, { useState } from "react";
+import React from "react";
 import VolumeLabel from "../VolumeLabel/VolumeLabel";
 import ButtonVolume from "../Button/Button";
 

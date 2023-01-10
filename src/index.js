@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Home from "./App/App";
+import Home from "./Home/Home";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import History from "./History/History";
 import Settings from "./Settings/Settings";
