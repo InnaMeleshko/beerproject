@@ -1,10 +1,14 @@
-Footer {
-  margin-top: auto;
+.Footer {
+  display: flex;
+  width: 100%;
 }
 
 .Footer-inner {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+
+  
+  margin: 2em;
+  width: 100%;
+
 }

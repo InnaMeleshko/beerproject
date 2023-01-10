@@ -14,7 +14,8 @@ const About = () => {
       <Header title="About " />
 
       <div className="Container">
-        <div className="Main">
+       
+      
           <div className="Container-inner">
             <div>
               <h3>Made by Inna Meleshko</h3>
@@ -28,7 +29,7 @@ const About = () => {
         </div>
         <Footer style={{ marginTop: "auto" }} />
       </div>
-    </div>
+    
   );
 };
 export default About;

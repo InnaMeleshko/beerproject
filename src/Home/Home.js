@@ -24,9 +24,10 @@ const App = (props) => {
   return (
     <div>
       <Header title="Final price: " secondTitle="Last update: " />
-      <div className="Container">
-        <div className="Main">
+      <div className="Container" >
+        
           <div className="Buttons-container">
+          
             <div className="Buttons-block">
               <ButtonVolume
                 onClick={() => {
@@ -71,7 +72,7 @@ const App = (props) => {
         </div>
         <Footer />
       </div>
-    </div>
+   
   );
 };
 

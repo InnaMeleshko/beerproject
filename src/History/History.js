@@ -18,7 +18,7 @@ const History = (props) => {
     <div>
       <Header title="Drinking history" />
 
-      <div className="Container">
+      <div className="Container" style={{margin: '2em'}}>
         <div className="container-inner">
           <div>
             <div className="container-block">
@@ -28,7 +28,7 @@ const History = (props) => {
 
             <div className="container-block">
               <h3>Final volume</h3>
-              <VolumeLabel label={"U had " + total + " liters in common, "} />
+              <VolumeLabel label={"U had " + total + " liters in common, " } />
             </div>
           </div>
 

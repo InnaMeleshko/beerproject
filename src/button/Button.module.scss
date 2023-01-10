@@ -1,5 +1,6 @@
 Button {
   padding: 15px 60px;
+ 
   border: none;
   border-radius: 1em;
   font-size: 1em;
@@ -16,4 +17,15 @@ Button {
   &:active {
     background-color: #e1c639;
   }
+
+
+  @media (max-width: 768px) {
+   padding: 10px;
+  }
+
+
+
 }
+
+
+
