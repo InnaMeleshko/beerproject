@@ -14,18 +14,16 @@ const About = () => {
       <Header title="About " />
 
       <div className="Container">
-       
-          <div>
-            <h3 style={{marginBottom: '3em'}}>Made by Inna Meleshko</h3>
-          </div>
-          <div>
-            <Button variant="orange" onClick={goBack}>
-              Go back
-            </Button>
-          </div>
-       
+        <div>
+          <h3 style={{ marginBottom: "3em" }}>Made by Inna Meleshko</h3>
+        </div>
+        <div>
+          <Button variant="orange" onClick={goBack}>
+            Go back
+          </Button>
+        </div>
       </div>
-      <Footer  />
+      <Footer />
     </div>
   );
 };

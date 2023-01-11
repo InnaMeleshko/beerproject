@@ -57,8 +57,6 @@ const Settings = () => {
             Go back
           </Button>
         </div>
-
-       
       </div>
       <Footer />
     </div>

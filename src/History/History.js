@@ -21,7 +21,7 @@ const History = (props) => {
       <div className="Container">
         <div className="Buttons-container">
           <div className="Buttons-block">
-            <h3 style={{marginRight: '2em'}}>Numbers of beers</h3>
+            <h3 style={{ marginRight: "2em" }}>Numbers of beers</h3>
             <VolumeLabel volume={counter + counter2 + counter3} />
           </div>
 

@@ -23,10 +23,7 @@ const App = (props) => {
 
   return (
     <div>
-      <Header
-     
-      
-      />
+      <Header />
       <div className="Container">
         <div className="Buttons-container">
           <div className="Buttons-block">
