@@ -1,20 +1,15 @@
-
 .Container {
-  
   margin: 0 auto;
-  
+
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-
-
 .container-inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 
   // min-height: 100vh;
 }
@@ -34,16 +29,12 @@
 }
 
 .Buttons-block {
-  margin: 0 auto;
+ 
   margin-bottom: 2em;
 
   max-width: 1200px;
   display: flex;
-  
+
   justify-content: space-between;
   align-items: center;
-
-
-
-
 }

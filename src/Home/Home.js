@@ -23,56 +23,56 @@ const App = (props) => {
 
   return (
     <div>
-      <Header title="Final price: " secondTitle="Last update: " />
-      <div className="Container" >
-        
-          <div className="Buttons-container">
-          
-            <div className="Buttons-block">
-              <ButtonVolume
-                onClick={() => {
-                  handlTotal(0.25);
-                  handleClick();
-                }}
-                volume="0.25"
-              />
-              <VolumeLabel volume={counter} />
-            </div>
-
-            <div className="Buttons-block">
-              <ButtonVolume
-                onClick={() => {
-                  handlTotal(0.33);
-                  handleClick2();
-                }}
-                volume="0.33"
-              />
-              <VolumeLabel volume={counter2} />
-            </div>
-
-            <div className="Buttons-block">
-              <ButtonVolume
-                onClick={() => {
-                  handlTotal(0.5);
-                  handleClick3();
-                }}
-                volume="0.50"
-              />
-              <VolumeLabel volume={counter3} />
-            </div>
+      <Header
+     
+      
+      />
+      <div className="Container">
+        <div className="Buttons-container">
+          <div className="Buttons-block">
+            <ButtonVolume
+              onClick={() => {
+                handlTotal(0.25);
+                handleClick();
+              }}
+              volume="0.25"
+            />
+            <VolumeLabel volume={counter} />
           </div>
 
-          <VolumeLabel
-            label={"U had " + total + " liters in common, "}
-            style={{
-              Width: "200px",
-            }}
-            volume={counter + counter2 + counter3}
-          />
+          <div className="Buttons-block">
+            <ButtonVolume
+              onClick={() => {
+                handlTotal(0.33);
+                handleClick2();
+              }}
+              volume="0.33"
+            />
+            <VolumeLabel volume={counter2} />
+          </div>
+
+          <div className="Buttons-block">
+            <ButtonVolume
+              onClick={() => {
+                handlTotal(0.5);
+                handleClick3();
+              }}
+              volume="0.50"
+            />
+            <VolumeLabel volume={counter3} />
+          </div>
         </div>
-        <Footer />
+
+        <VolumeLabel
+          label={"U had " + total + " liters in common, "}
+          style={{
+            Width: "200px",
+          }}
+          volume={counter + counter2 + counter3}
+        />
       </div>
-   
+      <Footer />
+    </div>
   );
 };
 

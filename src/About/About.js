@@ -15,21 +15,18 @@ const About = () => {
 
       <div className="Container">
        
-      
-          <div className="Container-inner">
-            <div>
-              <h3>Made by Inna Meleshko</h3>
-            </div>
-            <div>
-              <Button variant="orange" onClick={goBack}>
-                Go back
-              </Button>
-            </div>
+          <div>
+            <h3 style={{marginBottom: '3em'}}>Made by Inna Meleshko</h3>
           </div>
-        </div>
-        <Footer style={{ marginTop: "auto" }} />
+          <div>
+            <Button variant="orange" onClick={goBack}>
+              Go back
+            </Button>
+          </div>
+       
       </div>
-    
+      <Footer  />
+    </div>
   );
 };
 export default About;

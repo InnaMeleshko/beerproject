@@ -16,6 +16,7 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
+    "react-sticky": "^6.0.3",
     "sass": "^1.51.0",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"

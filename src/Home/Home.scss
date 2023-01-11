@@ -1,4 +1,11 @@
 
+
+
+// body {
+  
+//   height:100vh;
+//  }
+
 .Icon-information {
   text-decoration: none;
 }
@@ -30,8 +37,6 @@ span {
   margin-top: 2em;
 }
 
-
-
 .Icon-information {
   display: flex;
   flex-direction: column;
@@ -46,20 +51,13 @@ h3 {
   font-weight: 300;
 }
 
-
-
-
 .Inner-data {
   display: flex;
   justify-content: space-between;
 }
 
-
-
 .Buttons-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 3em;
- 
-  
 }

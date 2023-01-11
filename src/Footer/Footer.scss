@@ -1,14 +1,19 @@
 .Footer {
   display: flex;
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  // position: fixed;
+  // bottom: 0;
+
+  
+  
 }
 
 .Footer-inner {
   display: flex;
   justify-content: space-between;
 
-  
   margin: 2em;
   width: 100%;
-
 }

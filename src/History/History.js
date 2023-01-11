@@ -18,26 +18,22 @@ const History = (props) => {
     <div>
       <Header title="Drinking history" />
 
-      <div className="Container" style={{margin: '2em'}}>
-        <div className="container-inner">
-          <div>
-            <div className="container-block">
-              <h3>Numbers of beers</h3>
-              <VolumeLabel volume={counter + counter2 + counter3} />
-            </div>
-
-            <div className="container-block">
-              <h3>Final volume</h3>
-              <VolumeLabel label={"U had " + total + " liters in common, " } />
-            </div>
+      <div className="Container">
+        <div className="Buttons-container">
+          <div className="Buttons-block">
+            <h3 style={{marginRight: '2em'}}>Numbers of beers</h3>
+            <VolumeLabel volume={counter + counter2 + counter3} />
           </div>
 
-          <div className="button-block">
-            <Button variant="orange" onClick={goBack}>
-              Go back
-            </Button>
+          <div className="Buttons-block">
+            <h3>Final volume</h3>
+            <VolumeLabel label={"U had " + total + " liters "} />
           </div>
         </div>
+
+        <Button variant="orange" onClick={goBack}>
+          Go back
+        </Button>
       </div>
 
       <Footer />

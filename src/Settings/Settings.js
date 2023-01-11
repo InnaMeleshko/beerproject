@@ -58,8 +58,9 @@ const Settings = () => {
           </Button>
         </div>
 
-        <Footer />
+       
       </div>
+      <Footer />
     </div>
   );
 };
