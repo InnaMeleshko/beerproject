@@ -5,6 +5,9 @@ import Button from "@mui/material/Button";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import VolumeLabel from "../VolumeLabel/VolumeLabel";
+import { Container } from "@mui/system";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 
 const History = (props) => {
   const navigate = useNavigate();
@@ -17,26 +20,36 @@ const History = (props) => {
   return (
     <div>
       <Header title="Drinking history" />
+      <Container>
+       
+          <Grid
+            container
+            rowSpacing={5}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            style={{ paddingTop: "3em", paddingBottom: "3em" }}
+          >
+            <Grid item xs={6}>
+              <h3> Numbers of beers</h3>
+            </Grid>
 
-      <div className="Container">
-        <div className="Buttons-container">
-          <div className="Buttons-block">
-            <h3 style={{ marginRight: "2em" }}>Numbers of beers</h3>
-            <VolumeLabel volume={counter + counter2 + counter3} />
-          </div>
+            <Grid item xs={6}>
+              <VolumeLabel
+                volume={counter + counter2 + counter3}
+                showEnding={true}
+              />
+            </Grid>
 
-          <div className="Buttons-block">
-            <h3>Final volume</h3>
-            <VolumeLabel label={"U had " + total + " liters "} />
-          </div>
-        </div>
+            <Grid item xs={6}>
+              <h3>Final volume</h3>
+            </Grid>
 
-        <Button variant="orange" onClick={goBack}>
-          Go back
-        </Button>
-      </div>
-
-      <Footer />
+            <Grid item xs={6}>
+              <VolumeLabel label={"U had " + total + " liters "} />
+            </Grid>
+          </Grid>
+     
+        <Footer />
+      </Container>
     </div>
   );
 };

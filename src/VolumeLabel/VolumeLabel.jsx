@@ -7,7 +7,7 @@ function VolumeLabel(props) {
 
   return (
     <span style={{ padding: "20px" }} className={styles.label}>
-      {label} {props.volume} {ending}
+      {label} {props.volume} {props.showEnding ? ending : ""}
     </span>
   );
 }

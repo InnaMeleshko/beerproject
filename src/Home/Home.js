@@ -1,11 +1,13 @@
 import "./Home.scss";
 
-import React from "react";
 import VolumeLabel from "../VolumeLabel/VolumeLabel";
 import ButtonVolume from "../Button/Button";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import Grid from "@mui/material/Grid";
 
 const App = (props) => {
   const total = props.total;
@@ -21,55 +23,74 @@ const App = (props) => {
 
   const counter3 = props.counter3;
 
+  // const Item = styled(Paper)(({ theme }) => ({
+  //   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  //   ...theme.typography.body2,
+  //   padding: theme.spacing(1),
+  //   textAlign: "center",
+  //   color: theme.palette.text.secondary,
+  // }));
+
   return (
-    <div>
+    <Container>
       <Header />
-      <div className="Container">
-        <div className="Buttons-container">
-          <div className="Buttons-block">
-            <ButtonVolume
-              onClick={() => {
-                handlTotal(0.25);
-                handleClick();
-              }}
-              volume="0.25"
-            />
-            <VolumeLabel volume={counter} />
-          </div>
 
-          <div className="Buttons-block">
-            <ButtonVolume
-              onClick={() => {
-                handlTotal(0.33);
-                handleClick2();
-              }}
-              volume="0.33"
-            />
-            <VolumeLabel volume={counter2} />
-          </div>
+      <Grid
+        container
+        rowSpacing={2}
+        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        style={{ paddingTop: "3em", paddingBottom: "3em" }}
+      >
+        <Grid item xs={6}>
+          <ButtonVolume
+            onClick={() => {
+              handlTotal(0.25);
+              handleClick();
+            }}
+            volume="0.25"
+          />
+        </Grid>
 
-          <div className="Buttons-block">
-            <ButtonVolume
-              onClick={() => {
-                handlTotal(0.5);
-                handleClick3();
-              }}
-              volume="0.50"
-            />
-            <VolumeLabel volume={counter3} />
-          </div>
-        </div>
+        <Grid item xs={6}>
+          <VolumeLabel volume={counter} showEnding={true} />
+        </Grid>
 
+        <Grid item xs={6}>
+          <ButtonVolume
+            onClick={() => {
+              handlTotal(0.33);
+              handleClick2();
+            }}
+            volume="0.33"
+          />
+        </Grid>
+
+        <Grid item xs={6}>
+          <VolumeLabel volume={counter2} showEnding={true} />
+        </Grid>
+        <Grid item xs={6}>
+          <ButtonVolume
+            onClick={() => {
+              handlTotal(0.5);
+              handleClick3();
+            }}
+            volume="0.50"
+          />
+        </Grid>
+        <Grid item xs={6}>
+          <VolumeLabel volume={counter3} showEnding={true} />
+        </Grid>
+      </Grid>
+      <Box>
         <VolumeLabel
           label={"U had " + total + " liters in common, "}
-          style={{
-            Width: "200px",
-          }}
+          showEnding={true}
           volume={counter + counter2 + counter3}
         />
-      </div>
+      </Box>
+
       <Footer />
-    </div>
+    </Container>
   );
 };
 

@@ -1,17 +1,24 @@
 import React from "react";
-import "../Header/Header.scss";
 
-const Header = (props) => {
+import AppBar from "@mui/material/AppBar";
+
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+
+export default function ButtonAppBar() {
   return (
-    <header className="Header" color="secondary">
-      <div className="Header-inner">
-        <h1 className="Title">Beer app</h1>
-        <h2 className="Subtitle">{props.title}</h2>
-        {props.secondTitle ? (
-          <h2 className="Subtitle">{props.secondTitle} </h2>
-        ) : null}
-      </div>
-    </header>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography
+          variant="h6"
+          component="div"
+          sx={{ flexGrow: 1, fontWeight: "300" }}
+        >
+          Beer app
+        </Typography>
+        <Button color="inherit">Go to history</Button>
+      </Toolbar>
+    </AppBar>
   );
-};
-export default Header;
+}

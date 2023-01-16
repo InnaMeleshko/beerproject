@@ -3,6 +3,15 @@
 //   height:100vh;
 //  }
 
+.Container {
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+
 .Icon-information {
   text-decoration: none;
 }
@@ -26,7 +35,7 @@ span {
   border: none;
   border-radius: 1em;
   font-size: 1em;
-  display: block;
+  display: inline-block;
   text-align: center;
 }
 

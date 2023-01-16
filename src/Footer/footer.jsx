@@ -1,50 +1,61 @@
 import "../Footer/Footer.scss";
 import React from "react";
-import SportsBarOutlinedIcon from "@mui/icons-material/SportsBarOutlined";
-import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import Box from "@mui/material/Box";
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+
+import { Paper } from "@mui/material";
+import HistoryIcon from "@mui/icons-material/History";
+import HomeIcon from "@mui/icons-material/Home";
+import SettingsIcon from "@mui/icons-material/Settings";
+import SportsBarIcon from "@mui/icons-material/SportsBar";
 import { Link } from "react-router-dom";
-const Footer = () => {
+
+export default function SimpleBottomNavigation() {
+  const [value, setValue] = React.useState(1);
+
   return (
-    <footer className="Footer">
-      <div className="Footer-inner">
-        <Link to="/history" className="Icon-information">
-          <AccessTimeOutlinedIcon
-            color="primary"
-            fontSize="large"
-          ></AccessTimeOutlinedIcon>
-          <h3>History</h3>
-        </Link>
+    <Box sx={{ width: 500 }}>
+      <Paper
+        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        elevation={3}
+      >
+        <BottomNavigation
+          showLabels
+          value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+        >
+          <BottomNavigationAction
+            component={Link}
+            to="/history"
+            label="History"
+            icon={<HistoryIcon />}
+          />
 
-        <Link to="/" className="Icon-information">
-          <SportsBarOutlinedIcon
-            color="primary"
-            fontSize="large"
-          ></SportsBarOutlinedIcon>
-          <h3>BeerApp</h3>
-        </Link>
+          <BottomNavigationAction
+            component={Link}
+            label="Home"
+            icon={<HomeIcon />}
+            to="/"
+          />
 
-        <Link to="/settings" className="Icon-information">
-          <SettingsOutlinedIcon
-            color="primary"
-            fontSize="large"
-          ></SettingsOutlinedIcon>
-          <h3>Settings</h3>
-        </Link>
+          <BottomNavigationAction
+            component={Link}
+            label="Settings"
+            icon={<SettingsIcon />}
+            to="/settings"
+          />
 
-        <div className="Icon-information">
-          <Link to="/about" className="Icon-information">
-            <InfoOutlinedIcon
-              color="primary"
-              fontSize="large"
-            ></InfoOutlinedIcon>
-            <h3>About</h3>
-          </Link>
-        </div>
-      </div>
-    </footer>
+          <BottomNavigationAction
+            component={Link}
+            label="About"
+            icon={<SportsBarIcon />}
+            to="/about"
+          />
+        </BottomNavigation>
+      </Paper>
+    </Box>
   );
-};
-
-export default Footer;
+}
