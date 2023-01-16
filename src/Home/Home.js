@@ -32,16 +32,20 @@ const App = (props) => {
   // }));
 
   return (
-    <Container>
-      <Header />
+    <div>
+    <Header />
+    <Container >
+    
 
       <Grid
         container
         rowSpacing={2}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
         style={{ paddingTop: "3em", paddingBottom: "3em" }}
+
       >
-        <Grid item xs={6}>
+
+        <Grid  item xs={6} style={{alignItems: 'center'}}>
           <ButtonVolume
             onClick={() => {
               handlTotal(0.25);
@@ -91,6 +95,7 @@ const App = (props) => {
 
       <Footer />
     </Container>
+    </div>
   );
 };
 
