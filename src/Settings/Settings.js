@@ -1,65 +1,106 @@
 import React from "react";
-import Button from "@mui/material/Button";
 
-import { useNavigate } from "react-router-dom";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import { styled } from "@mui/material/styles";
+import { Container } from "@mui/system";
+
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import "../Settings/Settings.scss";
 import Switch from "@mui/material/Switch";
 
 const Settings = () => {
-  const navigate = useNavigate();
-  const goBack = () => navigate(-1);
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  }));
   const label = { inputProps: { "aria-label": "Switch demo" } };
+
   return (
     <div>
-      <Header title="Settings" />
-      <div className="Container">
-        <div className="container-inner">
-          <div className="container-block">
-            <div>
-              <h3>Vibration</h3>
-              <p>Turn on/off the vibration when counting</p>
-            </div>
-            <Switch {...label} defaultChecked color="warning" size="small" />
-          </div>
+      <Header />
+      <Container>
+        <Box sx={{ width: "100%" }}>
+          <Stack spacing={2} style={{ marginTop: "3em" }}>
+            <Item
+              style={{
+                display: "flex",
+                justifyContent: "flex-between",
+                alignContent: "center",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Box style={{ textAlign: "left", marginRight: "3em" }}>
+                <h3>Vibration</h3>
+                <p>Turn on/off the phone vibration when counting</p>
+              </Box>
 
-          <div className="container-block">
-            <div>
-              <h3>Don't tell me</h3>
-              <p>Turn on/off the total price</p>
-            </div>
-            <Switch {...label} defaultChecked color="warning" size="small" />
-          </div>
+              <Switch
+                {...label}
+                defaultChecked
+                color="warning"
+                size="small"
+                style={{ margin: "0" }}
+              />
+            </Item>
 
-          <div className="container-block">
-            <div>
-              <h3>Power drinker</h3>
-              <p>Show notification after 5 liters of beer</p>
-            </div>
+            <Item
+              style={{
+                display: "flex",
+                justifyContent: "flex-between",
+                alignContent: "center",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Box style={{ textAlign: "left", marginRight: "3em" }}>
+                <h3>Power drinker</h3>
+                <p>Show notification after 5 liters of drunk beer</p>
+              </Box>
 
-            <Switch {...label} defaultChecked color="warning" size="small" />
-          </div>
+              <Switch
+                {...label}
+                defaultChecked
+                color="warning"
+                size="small"
+                style={{ margin: "0" }}
+              />
+            </Item>
 
-          <div className="container-block">
-            <div>
-              <h3>History</h3>
-              <p>Here you can delete all your data.</p>
-            </div>
-            <Button variant="outlined" size="small">
-              Delete
-            </Button>
-          </div>
-        </div>
+            <Item
+              style={{
+                display: "flex",
+                justifyContent: "flex-between",
+                alignContent: "center",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Box style={{ textAlign: "left", marginRight: "3em" }}>
+                <h3>Don't tell me</h3>
+                <p>Turn on/off the information about total price</p>
+              </Box>
 
-        <div className="button-block">
-          <Button variant="orange" onClick={goBack}>
-            Go back
-          </Button>
-        </div>
-      </div>
+              <Switch
+                {...label}
+                defaultChecked
+                color="warning"
+                size="small"
+                style={{ margin: "0" }}
+              />
+            </Item>
+          </Stack>
+        </Box>
+      </Container>
       <Footer />
     </div>
   );
 };
+
 export default Settings;

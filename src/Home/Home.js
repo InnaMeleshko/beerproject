@@ -33,68 +33,64 @@ const App = (props) => {
 
   return (
     <div>
-    <Header />
-    <Container >
-    
+      <Header />
+      <Container>
+        <Grid
+          container
+          rowSpacing={2}
+          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          style={{ paddingTop: "3em", paddingBottom: "3em" }}
+        >
+          <Grid item xs={6} style={{ alignItems: "center" }}>
+            <ButtonVolume
+              onClick={() => {
+                handlTotal(0.25);
+                handleClick();
+              }}
+              volume="0.25"
+            />
+          </Grid>
 
-      <Grid
-        container
-        rowSpacing={2}
-        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-        style={{ paddingTop: "3em", paddingBottom: "3em" }}
+          <Grid item xs={6}>
+            <VolumeLabel volume={counter} showEnding={true} />
+          </Grid>
 
-      >
+          <Grid item xs={6}>
+            <ButtonVolume
+              onClick={() => {
+                handlTotal(0.33);
+                handleClick2();
+              }}
+              volume="0.33"
+            />
+          </Grid>
 
-        <Grid  item xs={6} style={{alignItems: 'center'}}>
-          <ButtonVolume
-            onClick={() => {
-              handlTotal(0.25);
-              handleClick();
-            }}
-            volume="0.25"
+          <Grid item xs={6}>
+            <VolumeLabel volume={counter2} showEnding={true} />
+          </Grid>
+          <Grid item xs={6}>
+            <ButtonVolume
+              onClick={() => {
+                handlTotal(0.5);
+                handleClick3();
+              }}
+              volume="0.50"
+            />
+          </Grid>
+          <Grid item xs={6}>
+            <VolumeLabel volume={counter3} showEnding={true} />
+          </Grid>
+        </Grid>
+        <Box>
+          <VolumeLabel
+            label={"U had " + total + " liters in common, "}
+            showEnding={true}
+            volume={counter + counter2 + counter3}
           />
-        </Grid>
+        </Box>
 
-        <Grid item xs={6}>
-          <VolumeLabel volume={counter} showEnding={true} />
-        </Grid>
-
-        <Grid item xs={6}>
-          <ButtonVolume
-            onClick={() => {
-              handlTotal(0.33);
-              handleClick2();
-            }}
-            volume="0.33"
-          />
-        </Grid>
-
-        <Grid item xs={6}>
-          <VolumeLabel volume={counter2} showEnding={true} />
-        </Grid>
-        <Grid item xs={6}>
-          <ButtonVolume
-            onClick={() => {
-              handlTotal(0.5);
-              handleClick3();
-            }}
-            volume="0.50"
-          />
-        </Grid>
-        <Grid item xs={6}>
-          <VolumeLabel volume={counter3} showEnding={true} />
-        </Grid>
-      </Grid>
-      <Box>
-        <VolumeLabel
-          label={"U had " + total + " liters in common, "}
-          showEnding={true}
-          volume={counter + counter2 + counter3}
-        />
-      </Box>
-
-      <Footer />
-    </Container>
+        <Footer />
+      </Container>
     </div>
   );
 };
