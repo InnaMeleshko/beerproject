@@ -14,13 +14,9 @@ const App = (props) => {
   const handleClick = props.handleClick;
   const handlTotal = props.handlTotal;
   const counter = props.counter;
-
   const handleClick2 = props.handleClick2;
-
   const counter2 = props.counter2;
-
   const handleClick3 = props.handleClick3;
-
   const counter3 = props.counter3;
 
   // const Item = styled(Paper)(({ theme }) => ({

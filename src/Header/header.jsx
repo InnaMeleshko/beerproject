@@ -6,7 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
-export default function ButtonAppBar() {
+const Header = (props) => {
   return (
     <AppBar position="static">
       <Toolbar>
@@ -21,4 +21,5 @@ export default function ButtonAppBar() {
       </Toolbar>
     </AppBar>
   );
-}
+};
+export default Header;

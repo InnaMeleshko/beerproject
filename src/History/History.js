@@ -1,16 +1,15 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import VolumeLabel from "../VolumeLabel/VolumeLabel";
 import { Container } from "@mui/system";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 
 const History = (props) => {
-  const navigate = useNavigate();
-  const goBack = () => navigate(-1);
+ 
+
   const counter2 = props.counter2;
   const counter3 = props.counter3;
   const counter = props.counter;
