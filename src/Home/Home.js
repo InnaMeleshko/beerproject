@@ -4,10 +4,12 @@ import VolumeLabel from "../VolumeLabel/VolumeLabel";
 import ButtonVolume from "../Button/Button";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
 
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Grid from "@mui/material/Grid";
+import Alert from "@mui/material/Alert";
 
 const App = (props) => {
   const total = props.total;
@@ -19,13 +21,7 @@ const App = (props) => {
   const handleClick3 = props.handleClick3;
   const counter3 = props.counter3;
 
-  // const Item = styled(Paper)(({ theme }) => ({
-  //   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  //   ...theme.typography.body2,
-  //   padding: theme.spacing(1),
-  //   textAlign: "center",
-  //   color: theme.palette.text.secondary,
-  // }));
+  const isShowAlert = props.total >= 5;
 
   return (
     <div>
@@ -83,6 +79,26 @@ const App = (props) => {
             showEnding={true}
             volume={counter + counter2 + counter3}
           />
+        </Box>
+
+        <Box  display="flex" alignItems="center" justifyContent="center" p={2}>
+          <Alert
+            style={{ display: isShowAlert ? "block" : "none" }}
+            severity="warning"
+          >
+            You had drunk 5 liters of beer. Would you like to continue?
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              m={2}
+            >
+              <Button style={{ marginRight: "1em" }} variant="contained">
+                Yes
+              </Button>
+              <Button variant="contained">NO</Button>
+            </Box>
+          </Alert>
         </Box>
 
         <Footer />

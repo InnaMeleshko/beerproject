@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import VolumeLabel from "../VolumeLabel/VolumeLabel";
@@ -8,8 +7,6 @@ import { Container } from "@mui/system";
 import Grid from "@mui/material/Grid";
 
 const History = (props) => {
- 
-
   const counter2 = props.counter2;
   const counter3 = props.counter3;
   const counter = props.counter;
