@@ -19,7 +19,8 @@ const theme = createTheme({
           style: {
             padding: "15px 60px",
             color: "#fff",
-            backgroundColor: "#d08821",
+            textColor: "#4e342e",
+            backgroundColor: "#f57c00",
             fontWeight: "300",
             boxShadow: "none",
             cursor: "pointer",
@@ -31,6 +32,7 @@ const theme = createTheme({
             },
             "&:active": {
               backgroundColor: "#e1c639",
+            
             },
           },
         },
@@ -39,10 +41,9 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      // light: will be calculated from palette.primary.main,
       main: "#f57c00",
-      // dark: will be calculated from palette.primary.main,
-      // contrastText: will be calculated to contrast with palette.primary.main
+      contrastText: "#FFFFFF"
+     
     },
 
     secondary: {

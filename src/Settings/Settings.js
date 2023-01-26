@@ -24,7 +24,7 @@ const Settings = () => {
   return (
     <div>
       <Header />
-      <Container>
+      <Container style={{maxWidth: '600px'}}>
         <Box sx={{ width: "100%" }}>
           <Stack spacing={2} style={{ marginTop: "3em" }}>
             <Item
@@ -84,7 +84,7 @@ const Settings = () => {
             >
               <Box style={{ textAlign: "left", marginRight: "3em" }}>
                 <h3>Don't tell me</h3>
-                <p>Turn on/off the information about total price</p>
+                <p>Turn off the information about total volume</p>
               </Box>
 
               <Switch

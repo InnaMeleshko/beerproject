@@ -15,7 +15,7 @@ const History = (props) => {
   return (
     <div>
       <Header title="Drinking history" />
-      <Container>
+      <Container style={{maxWidth: '600px'}}>
         <Grid
           container
           rowSpacing={5}

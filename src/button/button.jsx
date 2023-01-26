@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 function ButtonVolume(props) {
   return (
     <Box mr={4}>
-      <Button
+      <Button disabled={props.disabled} 
         variant="orange"
         color="primary"
         size="large"

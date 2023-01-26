@@ -4,12 +4,12 @@ import VolumeLabel from "../VolumeLabel/VolumeLabel";
 import ButtonVolume from "../Button/Button";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Grid from "@mui/material/Grid";
-import Alert from "@mui/material/Alert";
+
+import AlertComp from "../AlertComp/AlertСomp.js";
 
 const App = (props) => {
   const total = props.total;
@@ -21,12 +21,17 @@ const App = (props) => {
   const handleClick3 = props.handleClick3;
   const counter3 = props.counter3;
 
-  const isShowAlert = props.total >= 5;
+
+ 
+
+  const disabled = props.total >= 5
+
+
 
   return (
     <div>
       <Header />
-      <Container>
+      <Container style={{ maxWidth: "600px" }}>
         <Grid
           container
           rowSpacing={2}
@@ -34,7 +39,7 @@ const App = (props) => {
           style={{ paddingTop: "3em", paddingBottom: "3em" }}
         >
           <Grid item xs={6} style={{ alignItems: "center" }}>
-            <ButtonVolume
+            <ButtonVolume  disabled={disabled} 
               onClick={() => {
                 handlTotal(0.25);
                 handleClick();
@@ -48,7 +53,7 @@ const App = (props) => {
           </Grid>
 
           <Grid item xs={6}>
-            <ButtonVolume
+            <ButtonVolume  disabled={disabled} 
               onClick={() => {
                 handlTotal(0.33);
                 handleClick2();
@@ -61,7 +66,7 @@ const App = (props) => {
             <VolumeLabel volume={counter2} showEnding={true} />
           </Grid>
           <Grid item xs={6}>
-            <ButtonVolume
+            <ButtonVolume disabled={disabled} 
               onClick={() => {
                 handlTotal(0.5);
                 handleClick3();
@@ -81,25 +86,7 @@ const App = (props) => {
           />
         </Box>
 
-        <Box  display="flex" alignItems="center" justifyContent="center" p={2}>
-          <Alert
-            style={{ display: isShowAlert ? "block" : "none" }}
-            severity="warning"
-          >
-            You had drunk 5 liters of beer. Would you like to continue?
-            <Box
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              m={2}
-            >
-              <Button style={{ marginRight: "1em" }} variant="contained">
-                Yes
-              </Button>
-              <Button variant="contained">NO</Button>
-            </Box>
-          </Alert>
-        </Box>
+        <AlertComp total={total} />
 
         <Footer />
       </Container>
