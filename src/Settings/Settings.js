@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
@@ -10,6 +10,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import "../Settings/Settings.scss";
 import Switch from "@mui/material/Switch";
+import sound from "../Sounds/can.wav";
 
 const Settings = () => {
   const Item = styled(Paper)(({ theme }) => ({
@@ -20,6 +21,11 @@ const Settings = () => {
     color: theme.palette.text.secondary,
   }));
   const label = { inputProps: { "aria-label": "Switch demo" } };
+
+  // const [hasUserCheckedSwitch, setHasUserCheckedSwitch]= useState(false);
+  function play() {
+    new Audio(sound).play();
+  }
 
   return (
     <div>
@@ -44,6 +50,7 @@ const Settings = () => {
               </Box>
 
               <Switch
+                onChange={play}
                 {...label}
                 color="warning"
                 size="small"
@@ -68,6 +75,7 @@ const Settings = () => {
               </Box>
 
               <Switch
+                onChange={play}
                 {...label}
                 color="warning"
                 size="small"
@@ -92,6 +100,7 @@ const Settings = () => {
               </Box>
 
               <Switch
+                onChange={play}
                 {...label}
                 color="warning"
                 size="small"
