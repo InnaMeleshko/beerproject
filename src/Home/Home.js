@@ -21,12 +21,7 @@ const App = (props) => {
   const handleClick3 = props.handleClick3;
   const counter3 = props.counter3;
 
-
- 
-
-  const disabled = props.total >= 5
-
-
+  const disabled = props.total >= 5;
 
   return (
     <div>
@@ -39,7 +34,8 @@ const App = (props) => {
           style={{ paddingTop: "3em", paddingBottom: "3em" }}
         >
           <Grid item xs={6} style={{ alignItems: "center" }}>
-            <ButtonVolume  disabled={disabled} 
+            <ButtonVolume
+              disabled={disabled}
               onClick={() => {
                 handlTotal(0.25);
                 handleClick();
@@ -53,7 +49,8 @@ const App = (props) => {
           </Grid>
 
           <Grid item xs={6}>
-            <ButtonVolume  disabled={disabled} 
+            <ButtonVolume
+              disabled={disabled}
               onClick={() => {
                 handlTotal(0.33);
                 handleClick2();
@@ -66,7 +63,8 @@ const App = (props) => {
             <VolumeLabel volume={counter2} showEnding={true} />
           </Grid>
           <Grid item xs={6}>
-            <ButtonVolume disabled={disabled} 
+            <ButtonVolume
+              disabled={disabled}
               onClick={() => {
                 handlTotal(0.5);
                 handleClick3();

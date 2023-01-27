@@ -24,7 +24,7 @@ const Settings = () => {
   return (
     <div>
       <Header />
-      <Container style={{maxWidth: '600px'}}>
+      <Container style={{ maxWidth: "600px" }}>
         <Box sx={{ width: "100%" }}>
           <Stack spacing={2} style={{ marginTop: "3em" }}>
             <Item
@@ -36,14 +36,15 @@ const Settings = () => {
                 alignItems: "center",
               }}
             >
-              <Box style={{ textAlign: "left", marginRight: "3em" }}>
-                <h3>Vibration</h3>
-                <p>Turn on/off the phone vibration when counting</p>
+              <Box
+                style={{ textAlign: "left", marginRight: "3em", width: "60%" }}
+              >
+                <h3>Sound</h3>
+                <p>Turn on sound alert</p>
               </Box>
 
               <Switch
                 {...label}
-                defaultChecked
                 color="warning"
                 size="small"
                 style={{ margin: "0" }}
@@ -59,14 +60,15 @@ const Settings = () => {
                 alignItems: "center",
               }}
             >
-              <Box style={{ textAlign: "left", marginRight: "3em" }}>
+              <Box
+                style={{ textAlign: "left", marginRight: "3em", width: "60%" }}
+              >
                 <h3>Power drinker</h3>
                 <p>Show notification after 5 liters of drunk beer</p>
               </Box>
 
               <Switch
                 {...label}
-                defaultChecked
                 color="warning"
                 size="small"
                 style={{ margin: "0" }}
@@ -82,14 +84,15 @@ const Settings = () => {
                 alignItems: "center",
               }}
             >
-              <Box style={{ textAlign: "left", marginRight: "3em" }}>
+              <Box
+                style={{ textAlign: "left", marginRight: "3em", width: "60%" }}
+              >
                 <h3>Don't tell me</h3>
                 <p>Turn off the information about total volume</p>
               </Box>
 
               <Switch
                 {...label}
-                defaultChecked
                 color="warning"
                 size="small"
                 style={{ margin: "0" }}

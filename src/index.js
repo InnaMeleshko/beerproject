@@ -3,54 +3,14 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Home from "./Home/Home";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import theme from "../src/Theme";
+import { ThemeProvider } from "@mui/material/styles";
 import History from "./History/History";
 import Settings from "./Settings/Settings";
 
 import reportWebVitals from "./reportWebVitals";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import About from "./About/About";
-const theme = createTheme({
-  components: {
-    MuiButton: {
-      variants: [
-        {
-          props: { variant: "orange" },
-          style: {
-            padding: "15px 60px",
-            color: "#fff",
-            textColor: "#4e342e",
-            backgroundColor: "#f57c00",
-            fontWeight: "300",
-            boxShadow: "none",
-            cursor: "pointer",
-            fontSize: "1em",
-            borderRadius: "16px",
-            border: "none",
-            "&:hover": {
-              backgroundColor: "#b7582a",
-            },
-            "&:active": {
-              backgroundColor: "#e1c639",
-            
-            },
-          },
-        },
-      ],
-    },
-  },
-  palette: {
-    primary: {
-      main: "#f57c00",
-      contrastText: "#FFFFFF"
-     
-    },
-
-    secondary: {
-      main: "#4e342e",
-    },
-  },
-});
 
 const App = () => {
   const [counter, setCounter] = useState(0);

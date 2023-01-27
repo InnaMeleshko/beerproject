@@ -3,7 +3,7 @@
   "name": "Beer App PWA",
   "icons": [
     {
-      "src": "./public/images/logo",
+      "src": "./src/images/beercounter.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"

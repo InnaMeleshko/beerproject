@@ -10,7 +10,7 @@ const About = () => {
       <Header />
       <div
         className="about-description"
-        style={{ fontWeight: "300", color: "#4e342e" , maxWidth: '600px'}}
+        style={{ fontWeight: "300", color: "#4e342e", maxWidth: "600px" }}
       >
         <h3 style={{ marginBottom: 0, fontWeight: 400 }}>Overview:</h3>
         <p>Beer App is a simple counter-app builded on React.js</p>
