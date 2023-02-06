@@ -26,13 +26,21 @@ const AlertComp = (props) => {
               m={2}
             >
               <Button
-                onClick={() => setHasUserClickedHide(true)}
+                onClick={() => {
+                  setHasUserClickedHide(true);
+                  props.setHasClickedYes(true);
+                }}
                 style={{ marginRight: "1em" }}
                 variant="contained"
               >
                 Yes
               </Button>
-              <Button variant="contained">NO</Button>
+              <Button
+             
+                variant="contained"
+              >
+                NO
+              </Button>
             </Box>
           </Alert>
         </Box>

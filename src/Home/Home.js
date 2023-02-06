@@ -1,4 +1,5 @@
 import "./Home.scss";
+import React, { useState } from "react";
 
 import VolumeLabel from "../VolumeLabel/VolumeLabel";
 import ButtonVolume from "../Button/Button";
@@ -21,7 +22,9 @@ const App = (props) => {
   const handleClick3 = props.handleClick3;
   const counter3 = props.counter3;
 
-  const disabled = props.total >= 5;
+  const [hasClickedYes, setHasClickedYes] = useState(false);
+
+  const disabled = props.total >= 5 && !hasClickedYes;
 
   return (
     <div>
@@ -84,7 +87,7 @@ const App = (props) => {
           />
         </Box>
 
-        <AlertComp total={total} />
+        <AlertComp setHasClickedYes={setHasClickedYes} total={total} />
 
         <Footer />
       </Container>

@@ -22,10 +22,11 @@ const Settings = () => {
   }));
   const label = { inputProps: { "aria-label": "Switch demo" } };
 
-  // const [hasUserCheckedSwitch, setHasUserCheckedSwitch]= useState(false);
   function play() {
     new Audio(sound).play();
   }
+
+  // const [checked, setChecked] = useState(false);
 
   return (
     <div>
