@@ -35,12 +35,7 @@ const AlertComp = (props) => {
               >
                 Yes
               </Button>
-              <Button
-             
-                variant="contained"
-              >
-                NO
-              </Button>
+              <Button variant="contained">NO</Button>
             </Box>
           </Alert>
         </Box>
